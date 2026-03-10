@@ -1,16 +1,21 @@
-//! This crate provides TreeSitterVbDotnet language support for the [tree-sitter] parsing library.
+//! This crate provides vb_dotnet language support for the [tree-sitter] parsing library.
 //!
 //! Typically, you will use the [`LANGUAGE`] constant to add this language to a
 //! tree-sitter [`Parser`], and then use the parser to parse some code:
 //!
 //! ```
 //! let code = r#"
+//! Module HelloWorld
+//!     Sub Main()
+//!         Console.WriteLine("Hello, World!")
+//!     End Sub
+//! End Module
 //! "#;
 //! let mut parser = tree_sitter::Parser::new();
-//! let language = tree_sitter_tree_sitter_vb_dotnet::LANGUAGE;
+//! let language = tree_sitter_vb_dotnet::LANGUAGE;
 //! parser
 //!     .set_language(&language.into())
-//!     .expect("Error loading TreeSitterVbDotnet parser");
+//!     .expect("Error loading vb_dotnet parser");
 //! let tree = parser.parse(code, None).unwrap();
 //! assert!(!tree.root_node().has_error());
 //! ```
@@ -21,11 +26,11 @@
 use tree_sitter_language::LanguageFn;
 
 extern "C" {
-    fn tree_sitter_tree_sitter_vb_dotnet() -> *const ();
+    fn tree_sitter_vb_dotnet() -> *const ();
 }
 
 /// The tree-sitter [`LanguageFn`] for this grammar.
-pub const LANGUAGE: LanguageFn = unsafe { LanguageFn::from_raw(tree_sitter_tree_sitter_vb_dotnet) };
+pub const LANGUAGE: LanguageFn = unsafe { LanguageFn::from_raw(tree_sitter_vb_dotnet) };
 
 /// The content of the [`node-types.json`] file for this grammar.
 ///
@@ -46,6 +51,6 @@ mod tests {
         let mut parser = tree_sitter::Parser::new();
         parser
             .set_language(&super::LANGUAGE.into())
-            .expect("Error loading TreeSitterVbDotnet parser");
+            .expect("Error loading vb_dotnet parser");
     }
 }
