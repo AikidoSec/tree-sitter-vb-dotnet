@@ -3,7 +3,7 @@ $(error Windows is not supported)
 endif
 
 LANGUAGE_NAME := tree-sitter-vb-dotnet
-HOMEPAGE_URL := https://github.com/tree-sitter/tree-sitter-tree_sitter_vb_dotnet
+HOMEPAGE_URL := https://github.com/CodeAnt-AI/tree-sitter-vb-dotnet
 VERSION := 0.21.0
 
 # repository
