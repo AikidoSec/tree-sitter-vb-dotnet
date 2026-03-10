@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 3.13)
 
 project(tree-sitter-vb-dotnet
-        VERSION "0.1.0"
+        VERSION "0.21.0"
         DESCRIPTION "Tree sitter grammar for VB.NET"
         HOMEPAGE_URL "https://github.com/tree-sitter/tree-sitter-tree_sitter_vb_dotnet"
         LANGUAGES C)

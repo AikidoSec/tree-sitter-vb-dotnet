@@ -4,7 +4,7 @@ endif
 
 LANGUAGE_NAME := tree-sitter-vb-dotnet
 HOMEPAGE_URL := https://github.com/tree-sitter/tree-sitter-tree_sitter_vb_dotnet
-VERSION := 0.1.0
+VERSION := 0.21.0
 
 # repository
 SRC_DIR := src
