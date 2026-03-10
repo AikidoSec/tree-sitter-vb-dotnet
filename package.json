@@ -1,6 +1,6 @@
 {
   "name": "tree-sitter-vb-dotnet",
-  "version": "0.1.7",
+  "version": "0.21.0",
   "description": "Tree sitter grammar for VB.NET",
   "repository": {
     "type": "git",
@@ -35,10 +35,11 @@
   },
   "devDependencies": {
     "prebuildify": "^6.0.1",
-    "tree-sitter-cli": "^0.25.8"
+    "tree-sitter": "^0.21.0",
+    "tree-sitter-cli": "^0.21.0"
   },
   "peerDependencies": {
-    "tree-sitter": "^0.25.0"
+    "tree-sitter": "^0.21.0"
   },
   "peerDependenciesMeta": {
     "tree-sitter": {
